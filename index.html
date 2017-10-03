@@ -29,6 +29,12 @@
         $('#btn6').click(function() {
           $('#para1').before('<p style="background: green;">new Content</p>');
         });
+        $('#btn7').click(function() {
+          $('#para1').remove();
+        });
+        $('#btn8').click(function() {
+          $('#para1').empty();
+        });
 
       });
     </script>
@@ -43,6 +49,9 @@
         margin: 20px;
         color: white;
       }
+      #para1 {
+        background: blue;
+      }
     </style>
   </head>
   <body>
@@ -54,11 +63,14 @@
       <button type="button" name="button" id="btn4" class="btn btn-warning">Add more Content in List (Before:inside)</button>
       <button type="button" name="button" id="btn5" class="btn btn-warning">Add more Content (After)</button>
       <button type="button" name="button" id="btn6" class="btn btn-warning">Add more Content (Before)</button>
-
-      <p id="para1">
+      <hr>
+      <button type="button" name="button" id="btn7" class="btn btn-warning">Remove the Element and its Children</button>
+      <button type="button" name="button" id="btn8" class="btn btn-warning">Remove the Element&apos;s Children</button>
+      <div id="para1">
         <p>This is First Paragraph</p>
         <p>This is Second Paragraph</p>
-      </p>
+      </div>
+
       <ol id="ol1" class="list-group" style="list-style: none;">
         <li>First List Item</li>
         <li>Second List Item</li>
