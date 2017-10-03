@@ -7,18 +7,18 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#div1').click(function() {
-          //  $('#div2').hide();
-          //  $('#div2').show();
            $('#div2').toggle();
-
-          // alert('The Div has been Clicked!');
         });
         $('#div3').click(function() {
-          $('#div4').toggle();
+          // $('#div4').fadeOut();
+          // $('#div4').fadeIn();
+          $('#div4').fadeToggle();
         });
 
         $('#div5').click(function() {
-          $('#div6').toggle();
+          // $('#div6').slideUp();
+          // $('#div6').slideDown();
+          $('#div6').slideToggle();
         });
       });
     </script>
@@ -51,7 +51,7 @@
     </div>
     <div class="main">
       <div id="div5" class="head_style" style="">Click to Toggle</div>
-      <div id="div6" class="body_style" style=""></div>
+      <div id="div6" class="body_style" style="display: none;"></div>
     </div>
   </body>
 </html>
