@@ -12,11 +12,11 @@
             left: '300px',
             top: '0',
             backgroundColor: 'blue'
-          }, 3000).animate({
+          }, 1000).animate({
             left: '300px',
             top: '300px',
             backgroundColor: 'green'
-          }, 3000).animate({
+          }, 1000).animate({
             left: '0',
             top: '300px',
             backgroundColor: 'purple'
@@ -24,7 +24,9 @@
             left: '0',
             top: '0',
             backgroundColor: 'red'
-          }, 1000).slideUp();
+          }, 1000).slideUp(1000).slideDown(1000).fadeOut(1000, function() {
+            alert('The Animation Has Been Completedd.');
+          });
         });
       });
     </script>
