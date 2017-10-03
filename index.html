@@ -14,21 +14,26 @@
             //opacity: '.4',
             marginLeft: '300px',
             backgroundColor: 'blue'
-          });
+          }, 3000);
           $(this).animate({
             height: '250px',
             width: '250px',
             //opacity: '.4',
             marginLeft: '300px',
             backgroundColor: 'green'
-          });
+          }, 3000 );
+        });
+        $('button').click(function() {
+          $('#div1').stop();
+        });
+        $('#div2').click(function() {
+          $(this).slideUp(5000);
         });
       });
     </script>
     <style media="screen">
       .main {
         margin: 10px;
-        float: left;
       }
       .body_style {
         background: red;
@@ -38,8 +43,13 @@
     </style>
   </head>
   <body>
+    <button type="button" name="button">Click to Stop</button>
+    <br>
     <div class="main">
       <div id="div1" class="body_style" style=""></div>
+    </div>
+    <div class="main">
+      <div id="div2" class="body_style" style=""></div>
     </div>
   </body>
 </html>
