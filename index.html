@@ -11,23 +11,25 @@
     <script type="text/javascript">
       $(document).ready(function() {
         // jQuery Codes must be here
-        $('#img1').mouseenter(function() {
-          $(this).attr('src', 'images/image2.jpg');
-        });
-        $('#img1').mouseleave(function() {
-          $(this).attr('src', 'images/image1.jpg');
-        });
         $('#btn1').click(function() {
-          // var var1 = $('#img1').attr('src');
-          // alert(var1);
-          alert($('#img1').attr('src'));
+          $('#para1').append('<p style="background: red;">Hello World!</p>');
         });
         $('#btn2').click(function() {
-          $('#img1').attr('width','1000');
+          $('#para1').prepend('<p style="background: blue;">Hello World!</p>');
         });
         $('#btn3').click(function() {
-          $('#img1').attr('height','500');
+          $('#ol1').append('<li class="list-group-item-success">New List Item</li>');
         });
+        $('#btn4').click(function() {
+          $('#ol1').prepend('<li class="list-group-item-success">New List Item</li>');
+        });
+        $('#btn5').click(function() {
+          $('#para1').after('<p style="background: purple;">new Content</p>');
+        });
+        $('#btn6').click(function() {
+          $('#para1').before('<p style="background: green;">new Content</p>');
+        });
+
       });
     </script>
     <style media="screen">
@@ -46,17 +48,22 @@
   <body>
     <br>
     <div class="main">
-      <div class="col-md-2">
-        <button type="button" name="button" id="btn1" class="btn btn-danger btn-lg btn-block">click to get attr value</button>
-      </div>
-      <div class="col-md-2">
-        <button type="button" name="button" id="btn2" class="btn btn-danger btn-lg btn-block">click to change width</button>
-      </div>
-      <div class="col-md-2">
-        <button type="button" name="button" id="btn3" class="btn btn-danger btn-lg btn-block">click to change height</button>
-      </div>
-      <br>
-      <img src="images/image1.jpg" width="800" height="400" id="img1">
+      <button type="button" name="button" id="btn1" class="btn btn-success">Add more Content (After:inside)</button>
+      <button type="button" name="button" id="btn2" class="btn btn-warning">Add more Content (Before:inside)</button>
+      <button type="button" name="button" id="btn3" class="btn btn-warning">Add more Content in List (After:inside)</button>
+      <button type="button" name="button" id="btn4" class="btn btn-warning">Add more Content in List (Before:inside)</button>
+      <button type="button" name="button" id="btn5" class="btn btn-warning">Add more Content (After)</button>
+      <button type="button" name="button" id="btn6" class="btn btn-warning">Add more Content (Before)</button>
+
+      <p id="para1">
+        <p>This is First Paragraph</p>
+        <p>This is Second Paragraph</p>
+      </p>
+      <ol id="ol1" class="list-group" style="list-style: none;">
+        <li>First List Item</li>
+        <li>Second List Item</li>
+        <li>Third List Item</li>
+      </ol>
     </div>
   </body>
 </html>
