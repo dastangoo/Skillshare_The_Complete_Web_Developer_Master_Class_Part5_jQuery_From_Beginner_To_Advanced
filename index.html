@@ -9,47 +9,44 @@
       $(document).ready(function() {
         $('#div1').click(function() {
           $(this).animate({
-            height: '150px',
-            width: '150px',
-            //opacity: '.4',
-            marginLeft: '300px',
+            left: '300px',
+            top: '0',
             backgroundColor: 'blue'
-          }, 3000);
-          $(this).animate({
-            height: '250px',
-            width: '250px',
-            //opacity: '.4',
-            marginLeft: '300px',
+          }, 3000).animate({
+            left: '300px',
+            top: '300px',
             backgroundColor: 'green'
-          }, 3000 );
-        });
-        $('button').click(function() {
-          $('#div1').stop();
-        });
-        $('#div2').click(function() {
-          $(this).slideUp(5000);
+          }, 3000).animate({
+            left: '0',
+            top: '300px',
+            backgroundColor: 'purple'
+          }, 1000).animate({
+            left: '0',
+            top: '0',
+            backgroundColor: 'red'
+          }, 1000).slideUp();
         });
       });
     </script>
     <style media="screen">
       .main {
-        margin: 10px;
+        /*margin: 10px;*/
       }
       .body_style {
         background: red;
         width: 300px;
         height: 300px;
+        margin: 10px;
+        left: 0;
+        top: 0;
+        position: absolute;
       }
     </style>
   </head>
   <body>
-    <button type="button" name="button">Click to Stop</button>
     <br>
     <div class="main">
       <div id="div1" class="body_style" style=""></div>
-    </div>
-    <div class="main">
-      <div id="div2" class="body_style" style=""></div>
     </div>
   </body>
 </html>
