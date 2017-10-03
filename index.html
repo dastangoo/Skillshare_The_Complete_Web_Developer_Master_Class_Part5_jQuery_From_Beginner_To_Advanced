@@ -12,30 +12,14 @@
       $(document).ready(function() {
         // jQuery Codes must be here
         $('#btn1').click(function() {
-          $('#para1').append('<p style="background: red;">Hello World!</p>');
+          // $('#div1').css('background-color', 'red');
+          $('#div1').css({
+            'background': 'red',
+            'color': 'white',
+            'font-size': '20px',
+            'width': '200px'
+          });
         });
-        $('#btn2').click(function() {
-          $('#para1').prepend('<p style="background: blue;">Hello World!</p>');
-        });
-        $('#btn3').click(function() {
-          $('#ol1').append('<li class="list-group-item-success">New List Item</li>');
-        });
-        $('#btn4').click(function() {
-          $('#ol1').prepend('<li class="list-group-item-success">New List Item</li>');
-        });
-        $('#btn5').click(function() {
-          $('#para1').after('<p style="background: purple;">new Content</p>');
-        });
-        $('#btn6').click(function() {
-          $('#para1').before('<p style="background: green;">new Content</p>');
-        });
-        $('#btn7').click(function() {
-          $('#para1').remove();
-        });
-        $('#btn8').click(function() {
-          $('#para1').empty();
-        });
-
       });
     </script>
     <style media="screen">
@@ -49,33 +33,13 @@
         margin: 20px;
         color: white;
       }
-      #para1 {
-        background: blue;
-      }
     </style>
   </head>
   <body>
     <br>
     <div class="main">
-      <button type="button" name="button" id="btn1" class="btn btn-success">Add more Content (After:inside)</button>
-      <button type="button" name="button" id="btn2" class="btn btn-warning">Add more Content (Before:inside)</button>
-      <button type="button" name="button" id="btn3" class="btn btn-warning">Add more Content in List (After:inside)</button>
-      <button type="button" name="button" id="btn4" class="btn btn-warning">Add more Content in List (Before:inside)</button>
-      <button type="button" name="button" id="btn5" class="btn btn-warning">Add more Content (After)</button>
-      <button type="button" name="button" id="btn6" class="btn btn-warning">Add more Content (Before)</button>
-      <hr>
-      <button type="button" name="button" id="btn7" class="btn btn-warning">Remove the Element and its Children</button>
-      <button type="button" name="button" id="btn8" class="btn btn-warning">Remove the Element&apos;s Children</button>
-      <div id="para1">
-        <p>This is First Paragraph</p>
-        <p>This is Second Paragraph</p>
-      </div>
-
-      <ol id="ol1" class="list-group" style="list-style: none;">
-        <li>First List Item</li>
-        <li>Second List Item</li>
-        <li>Third List Item</li>
-      </ol>
+      <button type="button" name="button" id="btn1" class="btn btn-info">Click me</button>
+      <div id="div1">This is the div1</div>
     </div>
   </body>
 </html>
