@@ -6,34 +6,18 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        // jQuery Codes must be here
-        // $('div').click(function() {
-        //   $('div').fadeOut();
-        // });
-        // $('div').dblclick(function() {
-        //   $('div').fadeOut();
-        // });
-        // $('div').mouseout(function() {
-        //   $('div').fadeOut();
-        // });
-        // $('div').mouseleave(function() {
-        //   $('div').fadeOut();
-        // });
-        // $('div').mouseenter(function() {
-        //   $('div').fadeOut();
-        // });
-        // $('div').mousedown(function() {
-        //   $('div').fadeOut();
-        // });
-        $('div').mousedown(function() {
-          alert('The Div has been Clicked')
+        $('#div1').click(function() {
+           $('#div1').fadeOut();
+          // alert('The Div has been Clicked!');
         });
+        $('.div2').click(function() {
+          $('.div2').fadeOut();
+        })
       });
     </script>
   </head>
   <body>
-    <div style="background: orange; width: 500px; height: 300px;">
-
-    </div>
+    <div id="div1"style="background: orange; width: 500px; height: 300px;"></div>
+    <div  class="div2" style="background: red; width: 500px; height: 300px;"></div>
   </body>
 </html>
