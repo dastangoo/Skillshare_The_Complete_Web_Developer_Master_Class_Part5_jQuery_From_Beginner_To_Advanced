@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#main_div, #main_div2').sortable({
-          connectWith: '.linking'
+        $('#accordion').accordion({
+          collapsible: true
         });
-        // $('#main_div2').sortable();
       });
     </script>
     <style media="screen">
@@ -40,49 +39,43 @@
         width: 200px;
         height: 200px;
       }
-      .div1 {
-        background: silver;
-        border: 1px solid black;
-        width: 200px;
-        height: 40px;
-        margin: 20px;
-        text-align: center;
-      }
-      .div2 {
-        background: orange;
-        border: 1px solid black;
-        width: 200px;
-        height: 40px;
-        margin: 20px;
-        text-align: center;
-      }
-      #main_div {
-        float: left;
-        border: 1px solid silver;
-        padding: 20px;
-        margin-right: 20px;
-        width: 280px;
-      }
-      #main_div2 {
-        float: left;
-        border: 1px solid silver;
-        padding: 20px;
-        width: 280px;
-      }
     </style>
   </head>
   <body>
-    <div id="main_div" class="linking">
-      <div class="div1">A</div>
-      <div class="div1">B</div>
-      <div class="div1">C</div>
-      <div class="div1">D</div>
-    </div>
-    <div id="main_div2" class="linking">
-      <div class="div2">1</div>
-      <div class="div2">2</div>
-      <div class="div2">3</div>
-      <div class="div2">4</div>
+    <div id="accordion">
+      <h3>The First Menu</h3>
+      <div>
+        <p>Lorem ipsum dolor sit amet, ea mutat inermis accumsan nam. Cibo melius erroribus ei eos, eam ea debitis petentium quaerendum, ut usu nihil eripuit. Id pro fugit doctus facilis, unum iudico his ei. Debitis torquatos moderatius ea mei.
+
+Ne simul consetetur omittantur mea, ut sed scribentur theophrastus. In essent melius vim, at has sensibus explicari abhorreant. No usu lucilius splendide. Ne vix vide contentiones, singulis platonem hendrerit ne eam. Legere referrentur ex nec, in mel assum mucius debitis, erant tibique repudiandae et vix. Has ex electram corrumpit, mentitum vituperatoribus ius eu, et mel putent ocurreret.
+
+Ius autem ludus option id, et tritani meliore accumsan mei, ex minimum albucius est. Adhuc ornatus ad sed, at eam aeterno omittantur. Sed ad augue utamur discere. Nec tempor luptatum reformidans in, ad sea delectus scaevola efficiendi.
+
+Mea errem facilisi imperdiet no, tota falli pertinacia et mei, mazim imperdiet euripidis eum id. Qui diam tota ut. Eum ei fugit vivendum efficiantur. Enim liberavisse id quo, vidit ferri mel in. Ad has omnium reprimique.
+
+Vim nostro veritus eu, ut quas altera impedit quo. Mei menandri vituperata in, eu mei saepe noluisse, eum no unum dictas. Qui eu regione singulis, at cum nullam delectus convenire, his dicant populo feugiat ut. Vel quis accusamus et, fugit necessitatibus mea in. Nec te everti nusquam.</p>
+      </div>
+      <h3>The Second Menu</h3>
+      <p>Lorem ipsum dolor sit amet, ea mutat inermis accumsan nam. Cibo melius erroribus ei eos, eam ea debitis petentium quaerendum, ut usu nihil eripuit. Id pro fugit doctus facilis, unum iudico his ei. Debitis torquatos moderatius ea mei.
+
+Ne simul consetetur omittantur mea, ut sed scribentur theophrastus. In essent melius vim, at has sensibus explicari abhorreant. No usu lucilius splendide. Ne vix vide contentiones, singulis platonem hendrerit ne eam. Legere referrentur ex nec, in mel assum mucius debitis, erant tibique repudiandae et vix. Has ex electram corrumpit, mentitum vituperatoribus ius eu, et mel putent ocurreret.
+
+Ius autem ludus option id, et tritani meliore accumsan mei, ex minimum albucius est. Adhuc ornatus ad sed, at eam aeterno omittantur. Sed ad augue utamur discere. Nec tempor luptatum reformidans in, ad sea delectus scaevola efficiendi.
+
+Mea errem facilisi imperdiet no, tota falli pertinacia et mei, mazim imperdiet euripidis eum id. Qui diam tota ut. Eum ei fugit vivendum efficiantur. Enim liberavisse id quo, vidit ferri mel in. Ad has omnium reprimique.
+
+Vim nostro veritus eu, ut quas altera impedit quo. Mei menandri vituperata in, eu mei saepe noluisse, eum no unum dictas. Qui eu regione singulis, at cum nullam delectus convenire, his dicant populo feugiat ut. Vel quis accusamus et, fugit necessitatibus mea in. Nec te everti nusquam.</p>
+      <h3>The Third Menu</h3>
+      <p>Lorem ipsum dolor sit amet, ea mutat inermis accumsan nam. Cibo melius erroribus ei eos, eam ea debitis petentium quaerendum, ut usu nihil eripuit. Id pro fugit doctus facilis, unum iudico his ei. Debitis torquatos moderatius ea mei.
+
+Ne simul consetetur omittantur mea, ut sed scribentur theophrastus. In essent melius vim, at has sensibus explicari abhorreant. No usu lucilius splendide. Ne vix vide contentiones, singulis platonem hendrerit ne eam. Legere referrentur ex nec, in mel assum mucius debitis, erant tibique repudiandae et vix. Has ex electram corrumpit, mentitum vituperatoribus ius eu, et mel putent ocurreret.
+
+Ius autem ludus option id, et tritani meliore accumsan mei, ex minimum albucius est. Adhuc ornatus ad sed, at eam aeterno omittantur. Sed ad augue utamur discere. Nec tempor luptatum reformidans in, ad sea delectus scaevola efficiendi.
+
+Mea errem facilisi imperdiet no, tota falli pertinacia et mei, mazim imperdiet euripidis eum id. Qui diam tota ut. Eum ei fugit vivendum efficiantur. Enim liberavisse id quo, vidit ferri mel in. Ad has omnium reprimique.
+
+Vim nostro veritus eu, ut quas altera impedit quo. Mei menandri vituperata in, eu mei saepe noluisse, eum no unum dictas. Qui eu regione singulis, at cum nullam delectus convenire, his dicant populo feugiat ut. Vel quis accusamus et, fugit necessitatibus mea in. Nec te everti nusquam.</p>
+
     </div>
   </body>
 </html>
