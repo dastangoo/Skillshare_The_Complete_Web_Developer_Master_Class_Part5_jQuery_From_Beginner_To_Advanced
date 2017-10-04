@@ -13,9 +13,14 @@
 
 
     <script type="text/javascript">
-      var css_background = 'orange', css_width = '200px';
+      css = {
+        background: 'orange',
+        width: '200px',
+        height: '30px',
+        border_radius: '0'
+      };
       function css_func() {
-        css_tag = ".result{ background: " + css_background + ";width: " + css_width +";height: 30px;border: 2px solid blue; }";
+        css_tag = ".result{ background: " + css.background + ";width: " + css.width + ";height: " + css.height + ";border-radius: " + css.border_radius + ";border: 2px solid blue; }";
         $('style').replaceWith('<style>' + css_tag + '</style>');
         $('#css_coding').text(css_tag);
       }
@@ -23,18 +28,45 @@
       $(document).ready(function() {
         css_func();
         $('select').change(function() {
-          css_background = $(this).val();
+          css.background = $(this).val();
           css_func();
         });
         $('#width-changer').slider({
           range: 'min',
           value: 100,
-          min: 500,
+          min: 50,
           max: 200,
           slide: function(event, ui) {
-            css_width = ui.value + "px";
+            css.width = ui.value + "px";
             css_func();
           }
+        });
+        $('#height-changer').slider({
+          range: 'min',
+          value: 30,
+          min: 15,
+          max: 60,
+          slide: function(event, ui) {
+            css.height = ui.value + "px";
+            css_func();
+          }
+        });
+        $('#radius-changer').slider({
+          range: 'min',
+          value: 0,
+          min: 0,
+          max: 10,
+          slide: function(event, ui) {
+            css.border_radius = ui.value + "px";
+            css_func();
+          }
+        });
+
+        // Getting Codes in the jQuery UI Dialog Box
+        $('#css_button').click(function() {
+          $('#css_coding').dialog({
+            title: "The CSS"
+          });
         });
       });
     </script>
@@ -61,10 +93,20 @@
             <label>Change Width</label>
             <div id="width-changer"></div>
           </div>
+          <div class="form-group">
+            <label>Change Height</label>
+            <div id="height-changer"></div>
+          </div>
+          <div class="form-group">
+            <label>Change Border Radius</label>
+            <div id="radius-changer"></div>
+          </div>
         </div>
         <div class="col-md-6 blocks">
           <div class="result"></div>
           <div id="css_coding"></div>
+          <br><br><br><br>
+          <button type="button" name="button" class="btn btn-danger" id="css_button">Get CSS</button>
         </div>
       </div>
     </div>
