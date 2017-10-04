@@ -5,14 +5,50 @@
     <title>Learn jQuery UI</title>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
     <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#draggable').draggable();
+        $('#div1').draggable({
+          scroll: true,
+          scrollSensitivity: 100,
+          scrollSpeed: 100
+        });
+        $('#div2').draggable({
+          axis: 'x'
+        });
+        $('#div3').draggable({
+          axis: 'y'
+        });
       });
     </script>
+    <style media="screen">
+      #div1 {
+        background: orange;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+      }
+      #div2 {
+        background: green;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+      }
+      #div3 {
+        background: blue;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
   </head>
   <body>
-    <div id="draggable">Hello World!</div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
   </body>
 </html>
