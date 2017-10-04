@@ -13,36 +13,47 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('#div1').draggable({
-          scroll: true,
-          scrollSensitivity: 100,
-          scrollSpeed: 100
-        });
-        $('#div2').draggable({
-          axis: 'x'
+          revert: "valid"
         });
         $('#div3').draggable({
-          axis: 'y'
         });
+        $('#div2').droppable({
+          accept: '#div1',
+          drop: function(event, ui) {
+            $(this).addClass('dropped').text('Got It');
+          }
+        });
+
       });
     </script>
     <style media="screen">
+      body {
+        padding: 50px;
+      }
       #div1 {
+        background: red;
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        float: left;
+      }
+      #div2 {
+        border: 2px solid black;
+        width: 400px;
+        height: 400px;
+        float: right;
+      }
+      #div3 {
         background: orange;
         border: 2px solid black;
         width: 200px;
         height: 200px;
+        float: left;
       }
-      #div2 {
-        background: green;
-        border: 2px solid black;
-        width: 200px;
-        height: 200px;
-      }
-      #div3 {
+
+      .dropped {
         background: blue;
-        border: 2px solid black;
-        width: 200px;
-        height: 200px;
+        color: white;
       }
     </style>
   </head>
