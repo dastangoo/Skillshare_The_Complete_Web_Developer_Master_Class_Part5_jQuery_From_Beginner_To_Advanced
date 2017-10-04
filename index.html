@@ -12,12 +12,26 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#tabs').tabs({
-          event: "mouseover",
-          // collapsible: true
+        var var1 = [
+          'Pakistan',
+          'India',
+          'Brazil',
+          'Canada',
+          'United Kingdom',
+          'China',
+          'Russia'
+        ];
+        $('#get_data').autocomplete({
+          source: var1
         });
       });
     </script>
+    <style media="screen">
+      .ui-autocomplete {
+        max-height: 100px;
+        overflow-y: auto;
+      }
+    </style>
     <style media="screen">
       body {
         padding: 50px;
@@ -43,65 +57,6 @@
     </style>
   </head>
   <body>
-    <div id="tabs">
-      <ul>
-        <li><a href="#tabs-1">Home</a></li>
-        <li><a href="#tabs-2">Software</a></li>
-        <li><a href="#tabs-3">Technology</a></li>
-        <li><a href="#tabs-4">Contact Us</a></li>
-      </ul>
-      <div id="tabs-1">
-        <p>
-          Lorem ipsum dolor sit amet, ea mutat inermis accumsan nam. Cibo melius erroribus ei eos, eam ea debitis petentium quaerendum, ut usu nihil eripuit. Id pro fugit doctus facilis, unum iudico his ei. Debitis torquatos moderatius ea mei.
-
-  Ne simul consetetur omittantur mea, ut sed scribentur theophrastus. In essent melius vim, at has sensibus explicari abhorreant. No usu lucilius splendide. Ne vix vide contentiones, singulis platonem hendrerit ne eam. Legere referrentur ex nec, in mel assum mucius debitis, erant tibique repudiandae et vix. Has ex electram corrumpit, mentitum vituperatoribus ius eu, et mel putent ocurreret.
-
-  Ius autem ludus option id, et tritani meliore accumsan mei, ex minimum albucius est. Adhuc ornatus ad sed, at eam aeterno omittantur. Sed ad augue utamur discere. Nec tempor luptatum reformidans in, ad sea delectus scaevola efficiendi.
-
-  Mea errem facilisi imperdiet no, tota falli pertinacia et mei, mazim imperdiet euripidis eum id. Qui diam tota ut. Eum ei fugit vivendum efficiantur. Enim liberavisse id quo, vidit ferri mel in. Ad has omnium reprimique.
-
-  Vim nostro veritus eu, ut quas altera impedit quo. Mei menandri vituperata in, eu mei saepe noluisse, eum no unum dictas. Qui eu regione singulis, at cum nullam delectus convenire, his dicant populo feugiat ut. Vel quis accusamus et, fugit necessitatibus mea in. Nec te everti nusquam.
-        </p>
-      </div>
-      <div id="tabs-2">
-        <p>
-          Lorem ipsum dolor sit amet, ea mutat inermis accumsan nam. Cibo melius erroribus ei eos, eam ea debitis petentium quaerendum, ut usu nihil eripuit. Id pro fugit doctus facilis, unum iudico his ei. Debitis torquatos moderatius ea mei.
-
-  Ne simul consetetur omittantur mea, ut sed scribentur theophrastus. In essent melius vim, at has sensibus explicari abhorreant. No usu lucilius splendide. Ne vix vide contentiones, singulis platonem hendrerit ne eam. Legere referrentur ex nec, in mel assum mucius debitis, erant tibique repudiandae et vix. Has ex electram corrumpit, mentitum vituperatoribus ius eu, et mel putent ocurreret.
-
-  Ius autem ludus option id, et tritani meliore accumsan mei, ex minimum albucius est. Adhuc ornatus ad sed, at eam aeterno omittantur. Sed ad augue utamur discere. Nec tempor luptatum reformidans in, ad sea delectus scaevola efficiendi.
-
-  Mea errem facilisi imperdiet no, tota falli pertinacia et mei, mazim imperdiet euripidis eum id. Qui diam tota ut. Eum ei fugit vivendum efficiantur. Enim liberavisse id quo, vidit ferri mel in. Ad has omnium reprimique.
-
-  Vim nostro veritus eu, ut quas altera impedit quo. Mei menandri vituperata in, eu mei saepe noluisse, eum no unum dictas. Qui eu regione singulis, at cum nullam delectus convenire, his dicant populo feugiat ut. Vel quis accusamus et, fugit necessitatibus mea in. Nec te everti nusquam.
-        </p>
-      </div>
-      <div id="tabs-3">
-        <p>
-          Lorem ipsum dolor sit amet, ea mutat inermis accumsan nam. Cibo melius erroribus ei eos, eam ea debitis petentium quaerendum, ut usu nihil eripuit. Id pro fugit doctus facilis, unum iudico his ei. Debitis torquatos moderatius ea mei.
-
-  Ne simul consetetur omittantur mea, ut sed scribentur theophrastus. In essent melius vim, at has sensibus explicari abhorreant. No usu lucilius splendide. Ne vix vide contentiones, singulis platonem hendrerit ne eam. Legere referrentur ex nec, in mel assum mucius debitis, erant tibique repudiandae et vix. Has ex electram corrumpit, mentitum vituperatoribus ius eu, et mel putent ocurreret.
-
-  Ius autem ludus option id, et tritani meliore accumsan mei, ex minimum albucius est. Adhuc ornatus ad sed, at eam aeterno omittantur. Sed ad augue utamur discere. Nec tempor luptatum reformidans in, ad sea delectus scaevola efficiendi.
-
-  Mea errem facilisi imperdiet no, tota falli pertinacia et mei, mazim imperdiet euripidis eum id. Qui diam tota ut. Eum ei fugit vivendum efficiantur. Enim liberavisse id quo, vidit ferri mel in. Ad has omnium reprimique.
-
-  Vim nostro veritus eu, ut quas altera impedit quo. Mei menandri vituperata in, eu mei saepe noluisse, eum no unum dictas. Qui eu regione singulis, at cum nullam delectus convenire, his dicant populo feugiat ut. Vel quis accusamus et, fugit necessitatibus mea in. Nec te everti nusquam.
-        </p>
-      </div>
-      <div id="tabs-4">
-        <p>
-          Lorem ipsum dolor sit amet, ea mutat inermis accumsan nam. Cibo melius erroribus ei eos, eam ea debitis petentium quaerendum, ut usu nihil eripuit. Id pro fugit doctus facilis, unum iudico his ei. Debitis torquatos moderatius ea mei.
-
-  Ne simul consetetur omittantur mea, ut sed scribentur theophrastus. In essent melius vim, at has sensibus explicari abhorreant. No usu lucilius splendide. Ne vix vide contentiones, singulis platonem hendrerit ne eam. Legere referrentur ex nec, in mel assum mucius debitis, erant tibique repudiandae et vix. Has ex electram corrumpit, mentitum vituperatoribus ius eu, et mel putent ocurreret.
-
-  Ius autem ludus option id, et tritani meliore accumsan mei, ex minimum albucius est. Adhuc ornatus ad sed, at eam aeterno omittantur. Sed ad augue utamur discere. Nec tempor luptatum reformidans in, ad sea delectus scaevola efficiendi.
-
-  Mea errem facilisi imperdiet no, tota falli pertinacia et mei, mazim imperdiet euripidis eum id. Qui diam tota ut. Eum ei fugit vivendum efficiantur. Enim liberavisse id quo, vidit ferri mel in. Ad has omnium reprimique.
-
-  Vim nostro veritus eu, ut quas altera impedit quo. Mei menandri vituperata in, eu mei saepe noluisse, eum no unum dictas. Qui eu regione singulis, at cum nullam delectus convenire, his dicant populo feugiat ut. Vel quis accusamus et, fugit necessitatibus mea in. Nec te everti nusquam.
-        </p>
-      </div>
-    </div>
+    <input type="text" id="get_data">
   </body>
 </html>
