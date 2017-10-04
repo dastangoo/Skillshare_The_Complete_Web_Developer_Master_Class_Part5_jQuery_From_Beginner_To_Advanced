@@ -10,26 +10,27 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        // jQuery Codes must be here
         $('#btn1').click(function() {
           // First Method
-          // $('#div1').css('background-color', 'red');
+          $('#div1').width(500);
+          $('#div1').height(500);
 
           // Second Method
-          // $('#div1').css({
-          //   'background': 'red',
-          //   'color': 'white',
-          //   'font-size': '20px',
-          //   'width': '200px'
-          // });
+          // $('#div1').css('width', '500px');
 
           // Third Method
-          $('#div1').css({
-            'background': 'red',
-            'color': 'white',
-            'font-size': '20px',
-            'width': '200px'
-          });
+          // $('#div1').attr('width', '500');
+
+          $('#div1').text('Normal: The Width of this Element is: ' + $('#div1').width() + 'px and the Height of this Element is: ' +
+            $('#div1').height() + 'px');
+        });
+        $('#btn2').click(function() {
+          $('#div1').text('Inner: The Width of this Element is: ' + $('#div1').innerWidth() + 'px and the Height of this Element is: ' +
+            $('#div1').innerHeight() + 'px');
+        });
+        $('#btn3').click(function() {
+          $('#div1').text('Outer: The Width of this Element is: ' + $('#div1').outerWidth(true) + 'px and the Height of this Element is: ' +
+            $('#div1').outerHeight(true) + 'px');
         });
       });
     </script>
@@ -41,7 +42,9 @@
         background: red;
         width: 300px;
         height: 300px;
-        margin: 20px;
+        margin: 50px;
+        padding: 20px;
+        border: 5px solid black;
         color: white;
       }
     </style>
@@ -49,8 +52,10 @@
   <body>
     <br>
     <div class="main">
-      <button type="button" name="button" id="btn1" class="btn btn-info">Click me</button>
-      <div id="div1">This is the div1</div>
+      <button type="button" name="button" id="btn1" class="btn btn-primary btn-sm">Click me (Normal)</button>
+      <button type="button" name="button" id="btn2" class="btn btn-warning btn-sm">Click me (Inner)</button>
+      <button type="button" name="button" id="btn3" class="btn btn-info btn-sm">Click me (Outer)</button>
+      <div id="div1" class="body_style">This is the div1</div>
     </div>
   </body>
 </html>
