@@ -1,0 +1,23 @@
+.container {
+  width: 1000px;
+  height: 500px;
+  background: silver;
+  margin: 0 auto;
+}
+.right {
+  width: 500px;
+  height: 500px;
+  float: left;
+  background: gray;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.left {
+  width: 500px;
+  height: 500px;
+  float: left;
+}
+.elem {
+  width: 200px;
+  height: 30px;
+}

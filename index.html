@@ -4,64 +4,45 @@
     <meta charset="utf-8">
     <title>Learn jQuery UI</title>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-color.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
+
     <script type="text/javascript">
+      var css_background = 'orange';
+      function css_func() {
+        css_tag = ".result{ background: " + css_background + ";width: 100px;height: 30px;border: 2px solid blue; }";
+        $('style').replaceWith('<style>' + css_tag + '</style>');
+      }
+
       $(document).ready(function() {
-        $('#menu').menu();
+        css_func();
+        $('select').change(function() {
+          css_background = $(this).val();
+          css_func();
+        });
       });
     </script>
     <style media="screen">
-      body {
-        padding: 50px;
-      }
-      #div1 {
-        background: red;
-        border: 2px solid black;
-        width: 200px;
-        height: 200px;
-      }
-      #div2 {
-        border: 2px solid black;
-        width: 400px;
-        height: 400px;
-        float: right;
-      }
-      #div3 {
-        background: orange;
-        border: 2px solid black;
-        width: 200px;
-        height: 200px;
-      }
-      .ui-menu {
-        width: 200px;
-      }
     </style>
   </head>
   <body>
-    <ul id="menu">
-      <li>Home</li>
-      <li>Software</li>
-      <li>Technology
-        <ul>
-          <li>Information Technology
-            <ul>
-              <li>Computer Technology</li>
-              <li>Mobile Technology</li>
-              <li>Wireless Technology</li>
-              <li>Wired Technology</li>
-            </ul>
-          </li>
-          <li>Mechanical Technology</li>
-          <li>Chemical Technology</li>
-          <li>Electrical Technology</li>
-        </ul>
-      </li>
-      <li>Contact Us</li>
-    </ul>
+    <div class="container">
+      <div class="right">
+        <label for="">Select Any Color:  </label>
+        <select class="elem" name="">
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="black">Black</option>
+          <option value="gray">Gray</option>
+          <option value="yellow">Yellow</option>
+          <option value="purple">Purple</option>
+        </select>
+      </div>
+      <div class="left">
+        <div class="result"></div>
+      </div>
+    </div>
   </body>
 </html>
