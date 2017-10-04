@@ -12,26 +12,9 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <script type="text/javascript">
       $(document).ready(function() {
-        var var1 = [
-          'Pakistan',
-          'India',
-          'Brazil',
-          'Canada',
-          'United Kingdom',
-          'China',
-          'Russia'
-        ];
-        $('#get_data').autocomplete({
-          source: var1
-        });
+        $('#menu').menu();
       });
     </script>
-    <style media="screen">
-      .ui-autocomplete {
-        max-height: 100px;
-        overflow-y: auto;
-      }
-    </style>
     <style media="screen">
       body {
         padding: 50px;
@@ -54,9 +37,31 @@
         width: 200px;
         height: 200px;
       }
+      .ui-menu {
+        width: 200px;
+      }
     </style>
   </head>
   <body>
-    <input type="text" id="get_data">
+    <ul id="menu">
+      <li>Home</li>
+      <li>Software</li>
+      <li>Technology
+        <ul>
+          <li>Information Technology
+            <ul>
+              <li>Computer Technology</li>
+              <li>Mobile Technology</li>
+              <li>Wireless Technology</li>
+              <li>Wired Technology</li>
+            </ul>
+          </li>
+          <li>Mechanical Technology</li>
+          <li>Chemical Technology</li>
+          <li>Electrical Technology</li>
+        </ul>
+      </li>
+      <li>Contact Us</li>
+    </ul>
   </body>
 </html>
