@@ -12,18 +12,19 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#div1').draggable({
-          revert: "valid"
+        $('#div1').resizable({
+          grid: 100,
+          maxHeight: 600,
+          maxWidth: 600,
+          minWidth: 300,
+          minHeight: 300,
+          animate: true
+          // alsoResize: '#div3'
         });
-        $('#div3').draggable({
-        });
-        $('#div2').droppable({
-          accept: '#div1',
-          drop: function(event, ui) {
-            $(this).addClass('dropped').text('Got It');
-          }
-        });
-
+        // $('#div3').resizable({
+        //   grid: 100,
+        //   alsoResize: '#div1',
+        // });
       });
     </script>
     <style media="screen">
@@ -35,7 +36,6 @@
         border: 2px solid black;
         width: 200px;
         height: 200px;
-        float: left;
       }
       #div2 {
         border: 2px solid black;
@@ -48,18 +48,11 @@
         border: 2px solid black;
         width: 200px;
         height: 200px;
-        float: left;
-      }
-
-      .dropped {
-        background: blue;
-        color: white;
       }
     </style>
   </head>
   <body>
     <div id="div1"></div>
-    <div id="div2"></div>
-    <div id="div3"></div>
+    <!-- <div id="div3"></div> -->
   </body>
 </html>
