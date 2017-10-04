@@ -12,19 +12,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <script type="text/javascript">
       $(document).ready(function() {
-        $('#div1').resizable({
-          grid: 100,
-          maxHeight: 600,
-          maxWidth: 600,
-          minWidth: 300,
-          minHeight: 300,
-          animate: true
-          // alsoResize: '#div3'
-        });
-        // $('#div3').resizable({
-        //   grid: 100,
-        //   alsoResize: '#div1',
-        // });
+        $('#main_div').selectable();
       });
     </script>
     <style media="screen">
@@ -49,10 +37,28 @@
         width: 200px;
         height: 200px;
       }
+      .div1 {
+        background: red;
+        border: 1px solid black;
+        width: 200px;
+        height: 40px;
+        margin: 20px;
+      }
+      #main_div .ui-selecting {
+        background: orange;
+      }
+      #main_div .ui-selected {
+        background: blue;
+      }
     </style>
   </head>
   <body>
-    <div id="div1"></div>
-    <!-- <div id="div3"></div> -->
+    <div id="main_div">
+      <div class="div1"></div>
+      <div class="div1"></div>
+      <div class="div1"></div>
+      <div class="div1"></div>
+      <div class="div1"></div>
+    </div>
   </body>
 </html>
